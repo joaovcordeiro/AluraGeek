@@ -97,7 +97,7 @@ const products = [
         id: 1,
         name: "Camisa Atari",
         image:
-          "https://s3-alpha-sig.figma.com/img/3954/a3d3/e570bc8755e09021b38fc7a3a9840f80?Expires=1665964800&Signature=e93NjOh7XBYBkvLi9tSexJx~Ta7MWU-vLKW1KPQZKqpJEzH-t3KqPcT0lzeUuJIr~HIsgyh6V-~gpvdp6gRdIAX4EHZRCO0LwOHRMQkSnNjpnJKep9xlW764dojJXxHVQk5DGl3NOlfvVf1QIWnFKePdl3B1RIKfemnvniMvrLfQGXkLEuwVkrKe6kajOS-UHU8kDZT~AW33WAJB59SoZQi041kqI0JdJdlvd4CjBe0y6~AtmQyL~a~C4AVSifk~h3ncgJhFYbFABD1MyEY2vaWNDxs6NHKNOX5Ot3sulXahizvfGfIbyl~dmnW12r3SGJUVZ9ppvyYTCC3otkdvmg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+          "https://s3-alpha-sig.figma.com/img/9480/fb66/90a0dcbd12570f85e3cb01254c7221f5?Expires=1665964800&Signature=DKzOHLxSUesKopyKvEhZ3kwVWv3JUjmKT4Hy1RYrlBxN~4XYqSc4j7Hashp7GVwTe7AosyINu6TiMlyjaNzX7Xl1tzKa9S35Y~Kza4aUDhqy8nibBSe89ZucvKaFvaQGpEDrPhfhuYkXkr9ufZyzguLNHcvBkYaP1zFF1XRisvAqbyKulJfy22JprEV02kw0CLrEPsvMUqqJVj4K82mmz5Zz9LZf4AEjMXLYlNCsc1FyNQheXBkJ5Il46T1Lme9uJJJwlbLG3G~b~4sRoHD1-8TWloEHnqEAho1diSNuuQ-qgt0XgnC0z~jCnDm0jxshd~VK~rK4z0mkuKjWSJ42OQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
         price: 60,
       },
       {
