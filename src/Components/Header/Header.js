@@ -42,8 +42,3 @@ const HeaderContainer = styled.div`
     padding: 32px 0;
   }
 `;
-
-const LeftContainer = styled.div`
-  display: flex;
-  max-width: 440px;
-`;

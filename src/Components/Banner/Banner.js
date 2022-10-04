@@ -40,11 +40,6 @@ const BannerContainer = styled.div`
   }
 `;
 
-const BannerImage = styled.img`
-  width: 100%;
-  height: 14em;
-`;
-
 const BannerTittle = styled.h1`
   font-size: 1.37em;
   margin-bottom: 8px;
