@@ -23,6 +23,12 @@ const SearchBarContainer = styled.div`
   max-width: 393px;
   display: flex;
   align-items: center;
+
+  margin-left: calc(-50% + 250px);
+
+  @media (max-width: 500px) {
+    margin-left: 0;
+  }
 `;
 
 const SearchBarInput = styled.input`
@@ -31,7 +37,6 @@ const SearchBarInput = styled.input`
   border-radius: 20px;
   display: none;
   width: 272px;
-  margin-left: -130px;
   padding: 8px 16px;
   height: 40px;
 
@@ -48,7 +53,6 @@ const SearchBarInput = styled.input`
 
   @media (min-width: 1100px) {
     width: 393px;
-    margin-left: -300px;
   }
 `;
 

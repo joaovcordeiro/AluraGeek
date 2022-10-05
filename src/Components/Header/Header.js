@@ -1,13 +1,26 @@
 import styled from "styled-components";
+
+import { useNavigate, useLocation } from "react-router-dom";
+
 import HeaderLogo from "../Logo/Logo";
 import SearchBar from "./SearchBar";
 import Button from "../Button/Button";
 
 function Header() {
+  const navigate = useNavigate();
+  const locale = useLocation();
+
+  function handleClick() {
+    navigate("/login");
+  }
+
   return (
     <HeaderContainer>
       <HeaderLogo />
       <Button
+        disabled={locale.pathname === "/login"}
+        visibility={locale.pathname === "/login" ? "hidden" : "visible"}
+        onClick={handleClick}
         border="#2A7AE4"
         color="#2A7AE4"
         background="#FFF"
@@ -25,6 +38,7 @@ function Header() {
 export default Header;
 
 const HeaderContainer = styled.div`
+  position: relative;
   max-width: 1136px;
   display: flex;
   margin: 0 auto;
@@ -34,6 +48,7 @@ const HeaderContainer = styled.div`
   @media (min-width: 720px) {
     button {
       order: 3;
+      margin-left: 7%;
     }
     padding: 16px 32px;
   }

@@ -14,4 +14,7 @@ function ProductSection() {
 
 export default ProductSection;
 
-const Container = styled.main``;
+const Container = styled.main`
+  width: 100vw;
+  margin-bottom: 70px;
+`;

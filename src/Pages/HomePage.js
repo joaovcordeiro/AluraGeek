@@ -7,10 +7,8 @@ import Footer from "../Components/Footer/Footer";
 function HomePage() {
   return (
     <HomePageContainer>
-      <Header />
       <Banner />
       <ProductSection />
-      <Footer />
     </HomePageContainer>
   );
 }

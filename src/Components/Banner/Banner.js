@@ -65,7 +65,7 @@ const InfoContainer = styled.div`
   color: #fff;
   padding: 16px;
 
-  @media (min-width: 700px) {
+  @media (min-width: 768px) {
     padding: 32px;
   }
 

@@ -29,13 +29,15 @@ const Container = styled.div`
   max-width: 1136px;
   margin: 0 auto;
   margin-top: 50px;
+  padding: 0 16px;
 
-  @media (max-width: 768px) {
-    max-width: 710px;
+  @media (min-width: 768px) {
+    padding: 0 32px;
   }
 
-  @media (max-width: 1136px) {
-    max-width: calc(100% - 64px);
+  @media (min-width: 1136px) {
+    max-width: 1136px;
+    padding: 0;
   }
 `;
 
@@ -77,7 +79,7 @@ const ProductsContainer = styled.div`
   overflow-y: hidden;
   gap: 16px;
 
-  @media (max-width: 500px) {
+  @media (max-width: 380px) {
     flex-wrap: wrap;
   }
 

@@ -14,10 +14,11 @@ const ButtonContainer = styled.button`
   border: 1px solid ${(props) => props.border};
   background: ${(props) => props.background};
   min-width: ${(props) => props.minWidth};
+  height: ${(props) => props.height};
   cursor: pointer;
   font-size: 16px;
   padding: 12px 16px;
-
+  visibility: ${(props) => props.visibility};
   &:hover {
     background: ${(props) => props.backgroundHover};
     transition: 0.3s;

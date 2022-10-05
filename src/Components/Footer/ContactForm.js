@@ -1,16 +1,26 @@
 import styled from "styled-components";
 import Button from "../Button/Button";
+import Input from "../Input/Input";
 
 function ContactForm() {
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
   return (
-    <FormContainer>
+    <FormContainer onSubmit={(e) => handleSubmit}>
       <FormTitle>Fale conosco</FormTitle>
       <InputBox>
-        <FormInput id="name" type="text"></FormInput>
+        <Input id="name" type="text"></Input>
         <FormLabel htmlFor="name">Nome</FormLabel>
       </InputBox>
       <FormText type="text" placeholder="Escreva sua mensagem"></FormText>
-      <Button background={"#2A7AE4"} border={"#2A7AE4"} color={"#FFF"}>
+      <Button
+        type="submit"
+        background={"#2A7AE4"}
+        border={"#2A7AE4"}
+        color={"#FFF"}
+        backgroundHover="#5595E9"
+      >
         Enviar mensagem
       </Button>
     </FormContainer>
@@ -19,7 +29,7 @@ function ContactForm() {
 
 export default ContactForm;
 
-const FormContainer = styled.div`
+const FormContainer = styled.form`
   width: 100%;
   margin-bottom: 20px;
 `;
@@ -37,6 +47,7 @@ const InputBox = styled.div`
 
   input {
     height: 56px;
+    padding-top: 40px;
   }
 `;
 
@@ -46,25 +57,6 @@ const FormLabel = styled.label`
   left: 10px;
   font-size: 12px;
   color: #a2a2a2;
-`;
-
-const FormInput = styled.input`
-  width: 100%;
-  font-size: 1em;
-  padding: 20px 0 0 10px;
-  color: #464646;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 4px;
-  border-bottom: 1px solid #c8c8c8;
-
-  &:focus {
-    outline: none;
-  }
-
-  &::placeholder {
-    color: #a2a2a2;
-  }
 `;
 
 const FormText = styled.textarea`

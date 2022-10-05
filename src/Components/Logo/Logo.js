@@ -29,6 +29,10 @@ const LogoContainer = styled.div`
   @media (min-width: 1100px) {
     font-size: calc(1.2rem + ${(props) => props.width});
   }
+
+  &:focus {
+    box-shadow: none;
+  }
 `;
 
 const LogoImage = styled.img`

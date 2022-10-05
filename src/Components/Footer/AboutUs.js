@@ -34,4 +34,10 @@ const Container = styled.div`
 const Paragraph = styled.p`
   font-size: 1em;
   color: #464646;
+
+  cursor: pointer;
+  &:hover {
+    color: #2a7ae4;
+    transition: 0.3s;
+  }
 `;
