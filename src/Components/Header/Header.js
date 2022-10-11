@@ -9,17 +9,24 @@ import Button from "../Button/Button";
 function Header() {
   const navigate = useNavigate();
   const locale = useLocation();
+  const pathname = locale.pathname;
 
   function handleClick() {
-    navigate("/login");
+    if (pathname === "/") {
+      navigate("/login");
+    } else {
+      navigate("/products-home");
+    }
   }
 
   return (
     <HeaderContainer>
       <HeaderLogo />
       <Button
-        disabled={locale.pathname === "/login"}
-        visibility={locale.pathname === "/login" ? "hidden" : "visible"}
+        disabled={!pathname === "/" || !pathname === "/products"}
+        visibility={
+          pathname === "/" || pathname === "/products" ? "visible" : "hidden"
+        }
         onClick={handleClick}
         border="#2A7AE4"
         color="#2A7AE4"
@@ -28,7 +35,11 @@ function Header() {
         minWidth="133px"
         backgroundHover="#D4E4FA"
       >
-        Login
+        {pathname === "/"
+          ? "Login"
+          : pathname === "/products"
+          ? "Menu administrador"
+          : ""}
       </Button>
       <SearchBar />
     </HeaderContainer>

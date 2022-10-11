@@ -16,7 +16,7 @@ const ButtonContainer = styled.button`
   min-width: ${(props) => props.minWidth};
   height: ${(props) => props.height};
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   padding: 12px 16px;
   visibility: ${(props) => props.visibility};
   &:hover {

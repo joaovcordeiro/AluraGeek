@@ -1,19 +1,20 @@
 import styled from "styled-components";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
+import TextArea from "../Input/TextArea";
 
 function ContactForm() {
   function handleSubmit(e) {
     e.preventDefault();
   }
   return (
-    <FormContainer onSubmit={(e) => handleSubmit}>
+    <FormContainer onSubmit={(e) => handleSubmit(e)}>
       <FormTitle>Fale conosco</FormTitle>
       <InputBox>
         <Input id="name" type="text"></Input>
         <FormLabel htmlFor="name">Nome</FormLabel>
       </InputBox>
-      <FormText type="text" placeholder="Escreva sua mensagem"></FormText>
+      <TextArea placeholder="Escreva sua mensagem" />
       <Button
         type="submit"
         background={"#2A7AE4"}
@@ -46,7 +47,6 @@ const InputBox = styled.div`
   margin-bottom: 10px;
 
   input {
-    height: 56px;
     padding-top: 40px;
   }
 `;
@@ -57,25 +57,4 @@ const FormLabel = styled.label`
   left: 10px;
   font-size: 12px;
   color: #a2a2a2;
-`;
-
-const FormText = styled.textarea`
-  width: 100%;
-  height: 82px;
-  border: none;
-  border-radius: 4px;
-  border-bottom: 1px solid #c8c8c8;
-  font-size: 1em;
-  font-weight: 300;
-  padding: 15px 10px 0 10px;
-  margin-bottom: 10px;
-
-  resize: none;
-  &:focus {
-    outline: none;
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 `;

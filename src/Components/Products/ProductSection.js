@@ -3,10 +3,23 @@ import products from "../../Data/data";
 import Products from "./Products";
 
 function ProductSection() {
+  let categories = [];
+
+  function getAllCategories() {
+    products.forEach((product) => {
+      if (categories[product.category]) {
+        categories[product.category].push(product);
+      } else {
+        categories[product.category] = [product];
+      }
+    });
+  }
+
+  getAllCategories();
   return (
     <Container>
-      {products.map((product, index) => (
-        <Products key={index} product={product} />
+      {Object.keys(categories).map((category, index) => (
+        <Products key={index} product={{ [category]: categories[category] }} />
       ))}
     </Container>
   );

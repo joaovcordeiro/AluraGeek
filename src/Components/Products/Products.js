@@ -1,13 +1,19 @@
 import styled from "styled-components";
 import Product from "./Product";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { useLocation } from "react-router-dom";
 
 function Products({ product }) {
+  const location = useLocation();
+  const pathname = location.pathname;
   const tittle = Object.keys(product)[0];
   const formatedTittle = tittle.replace("_", " ");
+
   return (
     <Container>
-      <TittleContainer>
+      <TittleContainer
+        display={pathname === "/products-home" ? "none" : "flex"}
+      >
         <Title>{formatedTittle}</Title>
         <LinkContainer>
           <Link>Ver tudo</Link>
@@ -30,7 +36,6 @@ const Container = styled.div`
   margin: 0 auto;
   margin-top: 50px;
   padding: 0 16px;
-
   @media (min-width: 768px) {
     padding: 0 32px;
   }
@@ -64,7 +69,7 @@ const LinkContainer = styled.div`
 `;
 
 const TittleContainer = styled.div`
-  display: flex;
+  display: ${(props) => props.display};
   align-items: center;
   justify-content: space-between;
   margin-bottom: 15px;

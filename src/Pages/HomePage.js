@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import Header from "../Components/Header/Header";
 import Banner from "../Components/Banner/Banner";
 import ProductSection from "../Components/Products/ProductSection";
-import Footer from "../Components/Footer/Footer";
 
 function HomePage() {
   return (
